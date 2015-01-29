@@ -10,7 +10,7 @@ export default Ember.ObjectController.extend({
       model.set('word', word);
       model.set('definition', definition);
       model.save();
-      this.transitionToRoute('list.show');
+      this.transitionToRoute('lists.show');
     }
   }
 });

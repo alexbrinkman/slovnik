@@ -6,10 +6,10 @@ export default Ember.ObjectController.extend({
       var word = this.get('model');
       word.deleteRecord();
       word.save();
-      this.transitionToRoute('list.show');
+      this.transitionToRoute('lists.show');
     },
     keep: function(){
-      this.transitionToRoute('list.show');
+      this.transitionToRoute('lists.show');
     }
   }
 });

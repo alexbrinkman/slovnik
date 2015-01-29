@@ -1,15 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
-  needs: ['list'],
+  needs: ['words'],
 
   actions: {
     create: function () {
       var word = this.get('word');
       var definition = this.get('definition');
 
-      var listController = this.get('controllers.list');
-      var list = listController.get('model');
+      var wordsController = this.get('controllers.words');
+      var list = wordsController.get('model');
 
       var newWord = this.store.createRecord('word', {
         word: word,
@@ -21,8 +21,8 @@ export default Ember.ObjectController.extend({
       newWord.save();
 
       list.get('words').addObject(newWord);
-      this.transitionToRoute('list.show');
-
+      debugger;
+      this.transitionToRoute('lists.show');
     }
   }
 });

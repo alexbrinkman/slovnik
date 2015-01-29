@@ -1,0 +1,10 @@
+{{#each model}}
+<article>
+  <h3>{{word}}</h3>
+  <p class="note">{{definition}}</p>
+  {{#link-to 'words.delete' this word.id}}Delete{{/link-to}}
+  {{#link-to 'words.update' this word.id}}Update{{/link-to}}
+</article>
+{{else}}
+<p>This list does not have any words.</p>
+{{/each}}

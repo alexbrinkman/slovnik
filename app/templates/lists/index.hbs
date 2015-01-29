@@ -1,8 +1,8 @@
 <h1>Word Lists</h1>
-{{#link-to 'list.new'}}Create New Word List{{/link-to}}
+{{#link-to 'lists.new'}}Create New Word List{{/link-to}}
 {{#each}}
 <article>
-  <h2>{{#link-to 'list.show' this}}{{title}}{{/link-to}}</h2>
+  <h2>{{#link-to 'lists.show' this}}{{title}}{{/link-to}}</h2>
   <p class="note">{{description}}</p>
 </article>
 {{else}}

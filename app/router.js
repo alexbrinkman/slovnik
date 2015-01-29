@@ -6,8 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('lists');
-  this.resource('list', function(){
+  this.resource('lists', function(){
     this.route('new');
     this.route('show', {path: ':list_id'});
     this.route('update', {path: ':list_id/update'});
