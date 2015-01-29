@@ -1,0 +1,17 @@
+<h1>{{title}}</h1>
+<p class="note">{{description}}</p>
+{{#link-to 'words.new'}}New{{/link-to}} |
+{{#link-to 'list.quiz' this}}Quiz{{/link-to}} |
+{{#link-to 'list.update' this}}Update{{/link-to}} |
+{{#link-to 'list.delete' this}}Delete{{/link-to}}
+
+{{#each word in words}}
+<article>
+  <h3>{{word.word}}</h3>
+  <p class="note">{{word.definition}}</p>
+  {{#link-to 'words.delete' this word.id}}Delete{{/link-to}}
+  {{#link-to 'words.update' this word.id}}Update{{/link-to}}
+</article>
+{{else}}
+<p>This list does not have any words.</p>
+{{/each}}

@@ -1,0 +1,12 @@
+<h1>Create a Word List</h1>
+<form {{action 'create' on='submit'}}>
+  <fieldset>
+    <label>Title</label>
+    {{input type="text" name="title" value=title}}
+  </fieldset>
+  <fieldset>
+    <label>Description</label>
+    {{input type="text" name="description" value=description}}
+  </fieldset>
+  <button>Create</button>
+</form>

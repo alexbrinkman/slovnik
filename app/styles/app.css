@@ -1,3 +1,299 @@
-html, body {
-  margin: 20px;
+/* line 1, ../sass/partials/_base.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 5, ../sass/partials/_base.scss */
+body {
+  background: #3a4b55;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color: white;
+  line-height: 2em;
+  width: 100%;
+  max-width: 800px;
+  min-width: 555px;
+  margin: 0 auto;
+}
+
+/* line 17, ../sass/partials/_base.scss */
+header {
+  margin-bottom: 5em;
+}
+
+/* line 21, ../sass/partials/_base.scss */
+nav {
+  text-align: right;
+}
+
+/* line 25, ../sass/partials/_base.scss */
+article {
+  border-bottom: 1px dotted #b0b7ac;
+}
+
+/* line 29, ../sass/partials/_base.scss */
+article:hover {
+  background-color: #435662;
+}
+
+/* line 33, ../sass/partials/_base.scss */
+h1, h2, h3 {
+  font-weight: 300;
+  line-height: 1em;
+  margin-bottom: 1em;
+}
+
+/* line 39, ../sass/partials/_base.scss */
+h1 {
+  font-size: 5em;
+}
+
+/* line 43, ../sass/partials/_base.scss */
+h2 {
+  color: #b9c899;
+  font-size: 2em;
+}
+
+/* line 48, ../sass/partials/_base.scss */
+h3 {
+  color: #b0b7ac;
+  font-size: 1.1em;
+  line-height: 2em;
+}
+
+/* line 54, ../sass/partials/_base.scss */
+img {
+  display: inline-block;
+}
+
+/* line 58, ../sass/partials/_base.scss */
+li {
+  letter-spacing: 0px;
+}
+
+/* line 62, ../sass/partials/_base.scss */
+ul.links li {
+  display: inline-block;
+  list-style: none;
+  padding-right: 2em;
+}
+/* line 67, ../sass/partials/_base.scss */
+ul.links li a {
+  color: #b0b7ac;
+  text-decoration: none;
+}
+/* line 71, ../sass/partials/_base.scss */
+ul.links li a:hover {
+  color: white;
+}
+
+/* line 76, ../sass/partials/_base.scss */
+p, ul {
+  margin-bottom: 1em;
+  letter-spacing: 1px;
+  padding: 0;
+  list-style-position: inside;
+}
+
+/* line 83, ../sass/partials/_base.scss */
+a {
+  color: #b9c899;
+  text-decoration: underline;
+  letter-spacing: 2px;
+}
+
+/* line 89, ../sass/partials/_base.scss */
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 94, ../sass/partials/_base.scss */
+button {
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  background: none repeat scroll 0 0 #b9c899;
+  border: medium none;
+  color: #eeeeee;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: bold;
+  height: 3em;
+  width: 10em;
+  text-transform: uppercase;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 10px;
+  margin-right: 1em;
+}
+
+/* line 114, ../sass/partials/_base.scss */
+button:hover {
+  background-color: #435662;
+}
+
+/* line 118, ../sass/partials/_base.scss */
+::selection {
+  background: #b9c899;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?-6e8e29");
+  src: url("../fonts/icomoon.eot?#iefix-6e8e29") format("embedded-opentype"), url("../fonts/icomoon.woff?-6e8e29") format("woff"), url("../fonts/icomoon.ttf?-6e8e29") format("truetype"), url("../fonts/icomoon.svg?-6e8e29#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 12, ../sass/partials/_fonts.scss */
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 26, ../sass/partials/_fonts.scss */
+.icon-plus:before {
+  content: "\e600";
+}
+
+/* line 29, ../sass/partials/_fonts.scss */
+.icon-minus:before {
+  content: "\e601";
+}
+
+/* line 32, ../sass/partials/_fonts.scss */
+.icon-pencil:before {
+  content: "\e602";
+}
+
+/* line 1, ../sass/partials/_forms.scss */
+input[type=text] {
+  font-size: 2em;
+  height: 2em;
+  width: 100%;
+  background-color: #3a4b55;
+  border: 1px solid #b0b7ac;
+  color: #b0b7ac;
+}
+
+/* line 10, ../sass/partials/_forms.scss */
+fieldset {
+  margin: 0 0 20px 0;
+  font-size: 14px;
+  border: none;
+  padding-left: 0;
+}
+
+/* line 17, ../sass/partials/_forms.scss */
+fieldset label {
+  display: block;
+  margin: 0 0 5px 0;
+  font-weight: bold;
+  color: #b0b7ac;
+  font-size: 2em;
+}
+
+/* line 25, ../sass/partials/_forms.scss */
+fieldset textarea {
+  display: block;
+  width: 50%;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #b0b7ac;
+  background: #3a4b55;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 1, ../sass/partials/_classes.scss */
+.showOnSmall {
+  display: none;
+}
+
+/* line 5, ../sass/partials/_classes.scss */
+.note {
+  font-style: italic;
+  font-size: .9em;
+  color: #eeeeee;
+}
+
+/* line 11, ../sass/partials/_classes.scss */
+.left {
+  width: 50%;
+  float: left;
+  padding-left: 2.5em;
+  text-align: center;
+}
+
+/* line 18, ../sass/partials/_classes.scss */
+.right {
+  width: 50%;
+  float: right;
+  padding-right: 2.5em;
+  text-align: center;
+}
+
+/* line 25, ../sass/partials/_classes.scss */
+.hideOnInit {
+  display: none;
+}
+
+/* line 29, ../sass/partials/_classes.scss */
+#logo {
+  margin-top: 1em;
+  max-width: 100%;
+}
+
+@media handheld, only screen and (max-width: 575px) {
+  /* line 3, ../sass/partials/_handheld.scss */
+  body {
+    max-width: 575px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  /* line 9, ../sass/partials/_handheld.scss */
+  .main {
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+  }
+
+  /* line 14, ../sass/partials/_handheld.scss */
+  .hideOnSmall {
+    display: none;
+  }
+
+  /* line 18, ../sass/partials/_handheld.scss */
+  .showOnSmall {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /* line 24, ../sass/partials/_handheld.scss */
+  .showOnSmall a {
+    margin-top: 0;
+  }
 }

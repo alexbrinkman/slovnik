@@ -1,3 +1,10 @@
-<h2 id="title">Welcome to Ember.js</h2>
-
+<header>
+  <nav>
+    <ul class="links">
+      <li>{{#link-to 'index'}}Home{{/link-to}}</li>
+      <li>{{#link-to 'lists'}}Word Lists{{/link-to}}</li>
+      <li>{{#link-to 'about'}}About{{/link-to}}</li>
+    </ul>
+  </nav>
+</header>
 {{outlet}}

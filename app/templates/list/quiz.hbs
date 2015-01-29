@@ -1,0 +1,11 @@
+<h1>{{word.word}}</h1>
+<p id="definition" style="display:none;">{{word.definition}}</p>
+
+{{#if remaining}}
+<p class="note">{{remaining}} words remaining (out of {{totalCount}}).</p>
+{{/if}}
+
+<button {{action start}}>Start</button><br />
+<button class="hideOnInit" {{action show}}>Show</button><br />
+<button class="hideOnInit" {{action correct}}>Correct</button><br />
+<button class="hideOnInit" {{action incorrect}}>Incorrect</button>

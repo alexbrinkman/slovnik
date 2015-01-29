@@ -1,0 +1,12 @@
+<h1>{{title}}</h1>
+<form {{action 'update' on='submit'}}>
+  <fieldset>
+    <label>Title</label>
+    {{input type="text" value=title}}
+  </fieldset>
+  <fieldset>
+    <label>Description</label>
+    {{input type="text" value=description}}
+  </fieldset>
+  <button>Update</button>
+</form>

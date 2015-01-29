@@ -1,0 +1,12 @@
+<h2>Create a New Word</h2>
+<form {{action 'create' on='submit'}}>
+  <fieldset>
+    <label>Word</label>
+    {{input type="text" value=word}}
+  </fieldset>
+  <fieldset>
+    <label>Definition</label>
+    {{input type="text" value=definition}}
+  </fieldset>
+  <button>Create</button>
+</form>
