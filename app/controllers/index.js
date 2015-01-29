@@ -6,8 +6,7 @@ export default Ember.ObjectController.extend({
       this.transitionToRoute('lists');
     },
     quiz: function () {
-      // this.transitionToRoute('quiz.index');
-      alert('not yet implemented');
+      this.transitionToRoute('quiz');
     },
     about: function () {
       this.transitionToRoute('about');
