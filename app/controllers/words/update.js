@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
+  needs: ['words'],
+
   actions: {
     update: function () {
       var word = this.get('word');
@@ -10,7 +12,10 @@ export default Ember.ObjectController.extend({
       model.set('word', word);
       model.set('definition', definition);
       model.save();
-      this.transitionToRoute('lists.show');
+
+      var wordsController = this.get('controllers.words');
+      var list = wordsController.get('model');
+      this.transitionToRoute('lists.show', list);
     }
   }
 });

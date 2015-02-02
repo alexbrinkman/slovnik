@@ -20,7 +20,6 @@ export default Ember.ObjectController.extend({
 
       newWord.save();
 
-      debugger;
       list.get('words').addObject(newWord);
       this.transitionToRoute('lists.show', list);
     }
