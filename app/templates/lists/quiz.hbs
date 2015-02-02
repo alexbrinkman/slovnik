@@ -1,11 +1,18 @@
 <h1>{{word.word}}</h1>
 <p id="definition" style="display:none;">{{word.definition}}</p>
 
-{{#if remaining}}
-<p class="note">{{remaining}} words remaining (out of {{totalCount}}).</p>
+{{#if isComplete}}
+  <p>Complete!!!</p>
+  <p>Return to word lists.<p/>
 {{/if}}
 
-<button {{action 'start'}}>Start</button><br />
-<button class="hideOnInit" {{action 'show'}}>Show</button><br />
-<button class="hideOnInit" {{action 'correct'}}>Correct</button><br />
-<button class="hideOnInit" {{action 'incorrect'}}>Incorrect</button>
+{{#unless isStarted}}
+  <button {{action 'start'}}>Start</button><br />
+{{/unless}}
+
+{{#if inProcess}}
+  <button {{action 'show'}}>Show</button><br />
+  <button {{action 'correct'}}>Correct</button><br />
+  <button {{action 'incorrect'}}>Incorrect</button>
+  <p class="note">{{remaining}} words remaining (out of {{totalCount}}).</p>
+{{/if}}

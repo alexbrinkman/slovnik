@@ -5,11 +5,17 @@ export default Ember.ObjectController.extend({
   word : null,
   remaining : null,
   totalCount : null,
+  isStarted : false,
+  isComplete : false,
+
+  inProcess: function() {
+    return this.get('isStarted') && !this.get('isComplete');
+  }.property('isStarted', 'isComplete'),
 
   actions: {
 
     start: function(){
-      Ember.$('button').toggle();
+      this.set('isStarted', true);
       this._getRandomWord();
     },
 
@@ -36,6 +42,13 @@ export default Ember.ObjectController.extend({
     this.get('words').then(function(words){
       var wordsLeft = words.filterBy('complete', false);
       var remaining = wordsLeft.length;
+
+      if(remaining === 0){
+        self.set('isComplete', true);
+        self.set('remaining', remaining);
+        self.set('totalCount', words.get('length'));
+      }
+
       var randomNumber = Math.floor(Math.random() * remaining);
       var chosenWord = wordsLeft.objectAt(randomNumber);
       self.set('word', chosenWord);
