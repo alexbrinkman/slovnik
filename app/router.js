@@ -19,7 +19,6 @@ Router.map(function() {
     });
   });
   this.route('about');
-  this.route('quiz');  // temporary
 });
 
 export default Router;
