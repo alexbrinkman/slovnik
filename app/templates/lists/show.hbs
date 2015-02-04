@@ -1,16 +1,20 @@
-<h1>{{title}}</h1>
+<h1 class="no-space">{{title}}</h1>
 <p class="note">{{description}}</p>
-{{#link-to 'words.new' this}}New Word{{/link-to}} |
-{{#link-to 'lists.quiz' this}}Quiz{{/link-to}} |
-{{#link-to 'lists.update' this}}Update{{/link-to}} |
-{{#link-to 'lists.delete' this}}Delete{{/link-to}}
+{{#link-to 'words.new' this}}Add Word{{/link-to}} |
+ {{#link-to 'lists.quiz' this}}Quiz{{/link-to}} |
+ {{#link-to 'lists.update' this}}Update{{/link-to}} |
+ {{#link-to 'lists.delete' this}}Delete{{/link-to}}
+
+<h2>Words</h2>
 
 {{#each word in words}}
 <article>
-  <h3>{{word.word}}</h3>
-  <p class="note">{{word.definition}}</p>
-  {{#link-to 'words.delete' this word.id}}Delete{{/link-to}}
-  {{#link-to 'words.update' this word.id}}Update{{/link-to}}
+  <p>
+    <strong>{{word.word}}</strong>:
+    <span class="note">{{word.definition}}</span>
+    <span class="note">{{#link-to 'words.delete' this word.id}}Delete{{/link-to}}
+    <span class="note">{{#link-to 'words.update' this word.id}}Update{{/link-to}}
+  </p>
 </article>
 {{else}}
 <p>This list does not have any words.</p>

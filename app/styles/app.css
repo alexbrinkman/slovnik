@@ -1,9 +1,7 @@
-/* line 1, ../sass/partials/_base.scss */
 * {
   box-sizing: border-box;
 }
 
-/* line 5, ../sass/partials/_base.scss */
 body {
   background: #3a4b55;
   font-family: 'Open Sans', sans-serif;
@@ -16,78 +14,77 @@ body {
   margin: 0 auto;
 }
 
-/* line 17, ../sass/partials/_base.scss */
 header {
   margin-bottom: 5em;
 }
 
-/* line 21, ../sass/partials/_base.scss */
 nav {
   text-align: right;
 }
 
-/* line 25, ../sass/partials/_base.scss */
 article {
   border-bottom: 1px dotted #b0b7ac;
 }
 
-/* line 29, ../sass/partials/_base.scss */
 article:hover {
   background-color: #435662;
 }
 
-/* line 33, ../sass/partials/_base.scss */
 h1, h2, h3 {
   font-weight: 300;
   line-height: 1em;
   margin-bottom: 1em;
 }
 
-/* line 39, ../sass/partials/_base.scss */
+.no-space {
+  margin-bottom: .3em;
+}
+
 h1 {
   font-size: 5em;
 }
 
-/* line 43, ../sass/partials/_base.scss */
 h2 {
   color: #b9c899;
   font-size: 2em;
 }
 
-/* line 48, ../sass/partials/_base.scss */
+h2 a {
+  text-decoration: none;
+  color: white;
+}
+
+h2 a:hover {
+  color: #b9c899;
+}
+
 h3 {
   color: #b0b7ac;
   font-size: 1.1em;
   line-height: 2em;
 }
 
-/* line 54, ../sass/partials/_base.scss */
 img {
   display: inline-block;
 }
 
-/* line 58, ../sass/partials/_base.scss */
 li {
   letter-spacing: 0px;
 }
 
-/* line 62, ../sass/partials/_base.scss */
 ul.links li {
   display: inline-block;
   list-style: none;
   padding-right: 2em;
 }
-/* line 67, ../sass/partials/_base.scss */
 ul.links li a {
   color: #b0b7ac;
   text-decoration: none;
 }
-/* line 71, ../sass/partials/_base.scss */
 ul.links li a:hover {
   color: white;
 }
 
-/* line 76, ../sass/partials/_base.scss */
 p, ul {
   margin-bottom: 1em;
   letter-spacing: 1px;
@@ -95,20 +92,17 @@ p, ul {
   list-style-position: inside;
 }
 
-/* line 83, ../sass/partials/_base.scss */
 a {
   color: #b9c899;
   text-decoration: underline;
   letter-spacing: 2px;
 }
 
-/* line 89, ../sass/partials/_base.scss */
 a:hover {
   color: white;
   text-decoration: none;
 }
 
-/* line 94, ../sass/partials/_base.scss */
 button {
   -webkit-transition-property: background-color;
   -moz-transition-property: background-color;
@@ -137,12 +131,10 @@ button {
   margin-right: 1em;
 }
 
-/* line 114, ../sass/partials/_base.scss */
 button:hover {
   background-color: #435662;
 }
 
-/* line 118, ../sass/partials/_base.scss */
 ::selection {
   background: #b9c899;
 }
@@ -155,7 +147,6 @@ button:hover {
   font-style: normal;
 }
 
-/* line 12, ../sass/partials/_fonts.scss */
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'icomoon';
   speak: none;
@@ -169,22 +160,18 @@ button:hover {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 26, ../sass/partials/_fonts.scss */
 .icon-plus:before {
   content: "\e600";
 }
 
-/* line 29, ../sass/partials/_fonts.scss */
 .icon-minus:before {
   content: "\e601";
 }
 
-/* line 32, ../sass/partials/_fonts.scss */
 .icon-pencil:before {
   content: "\e602";
 }
 
-/* line 1, ../sass/partials/_forms.scss */
 input[type=text] {
   font-size: 2em;
   height: 2em;
@@ -194,7 +181,6 @@ input[type=text] {
   color: #b0b7ac;
 }
 
-/* line 10, ../sass/partials/_forms.scss */
 fieldset {
   margin: 0 0 20px 0;
   font-size: 14px;
@@ -202,7 +188,6 @@ fieldset {
   padding-left: 0;
 }
 
-/* line 17, ../sass/partials/_forms.scss */
 fieldset label {
   display: block;
   margin: 0 0 5px 0;
@@ -211,7 +196,6 @@ fieldset label {
   font-size: 2em;
 }
 
-/* line 25, ../sass/partials/_forms.scss */
 fieldset textarea {
   display: block;
   width: 50%;
@@ -227,19 +211,16 @@ fieldset textarea {
   border-radius: 4px;
 }
 
-/* line 1, ../sass/partials/_classes.scss */
 .showOnSmall {
   display: none;
 }
 
-/* line 5, ../sass/partials/_classes.scss */
 .note {
   font-style: italic;
   font-size: .9em;
   color: #eeeeee;
 }
 
-/* line 11, ../sass/partials/_classes.scss */
 .left {
   width: 50%;
   float: left;
@@ -247,7 +228,6 @@ fieldset textarea {
   text-align: center;
 }
 
-/* line 18, ../sass/partials/_classes.scss */
 .right {
   width: 50%;
   float: right;
@@ -255,44 +235,37 @@ fieldset textarea {
   text-align: center;
 }
 
-/* line 25, ../sass/partials/_classes.scss */
 .hideOnInit {
   display: none;
 }
 
-/* line 29, ../sass/partials/_classes.scss */
 #logo {
   margin-top: 1em;
   max-width: 100%;
 }
 
 @media handheld, only screen and (max-width: 575px) {
-  /* line 3, ../sass/partials/_handheld.scss */
   body {
     max-width: 575px;
     margin: 0 auto;
     overflow: hidden;
   }
 
-  /* line 9, ../sass/partials/_handheld.scss */
   .main {
     margin-top: 1em;
     margin-bottom: 1.5em;
   }
 
-  /* line 14, ../sass/partials/_handheld.scss */
   .hideOnSmall {
     display: none;
   }
 
-  /* line 18, ../sass/partials/_handheld.scss */
   .showOnSmall {
     display: block;
     margin-top: 0;
     margin-bottom: 0;
   }
 
-  /* line 24, ../sass/partials/_handheld.scss */
   .showOnSmall a {
     margin-top: 0;
   }
