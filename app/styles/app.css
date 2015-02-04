@@ -18,6 +18,13 @@ header {
   margin-bottom: 5em;
 }
 
+footer {
+  margin-top: 2em;
+  text-align: center;
+  font-size: .75em;
+  color: #b0b7ac;
+}
+
 nav {
   text-align: right;
 }
