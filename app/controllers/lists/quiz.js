@@ -34,6 +34,14 @@ export default Ember.ObjectController.extend({
     incorrect: function(){
       Ember.$('#definition').hide();
       this._getRandomWord();
+    },
+
+    restart: function(){
+      this.get('words').then(function(words){
+        words.setEach('complete', false);
+      });
+      this.set('isComplete', false);
+      this._getRandomWord();
     }
   },
 
