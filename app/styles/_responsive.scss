@@ -1,0 +1,35 @@
+@media only screen and (max-width: 580px) {
+
+  body {
+    padding: 0 1em;
+  }
+
+  nav {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  button {
+    margin-right: 0;
+  }
+
+  .right, .left {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .home-screen {
+    margin-top: 1em;
+  }
+
+  ul.links li {
+    display: inline-block;
+    list-style: none;
+    padding: 0 1em;
+  }
+
+}
