@@ -1,10 +1,13 @@
 <h1 class="no-space">Word Lists</h1>
 {{#link-to 'lists.new'}}Create New Word List{{/link-to}}
+
 {{#each}}
+{{#link-to 'lists.show' this classNames="clickable-area"}}
 <article>
-  <h2>{{#link-to 'lists.show' this}}{{title}}{{/link-to}}</h2>
+  <h2>{{title}}</h2>
   <p class="note">{{description}}</p>
 </article>
+{{/link-to}}
 {{else}}
 <p>You have not yet created a list.</p>
 {{/each}}
