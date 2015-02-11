@@ -7,10 +7,18 @@ export default Ember.ObjectController.extend({
   totalCount : null,
   isStarted : false,
   isComplete : false,
+  hasWords: false,
 
   inProcess: function() {
     return this.get('isStarted') && !this.get('isComplete');
   }.property('isStarted', 'isComplete'),
+
+  hasWordsUpdate: function() {
+    var self = this;
+    this.get('words').then(function(words){
+      self.set('hasWords', words.get('length') > 0);
+    });
+  }.observes('words'),
 
   actions: {
 

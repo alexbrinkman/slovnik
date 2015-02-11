@@ -1,20 +1,28 @@
-{{#unless isStarted}}
-  <h1>Are you ready?</h1>
-  <button {{action 'start'}}>Begin</button>
-{{/unless}}
+{{#if hasWords}}
 
-{{#if inProcess}}
-  <h1 class="no-space">{{word.word}}</h1>
-  <p class="note"><a href="#" {{action 'show'}}>Show Definition</a></p>
-  <p id="definition" style="display:none;">{{word.definition}}</p>
-  <button {{action 'correct'}}>Correct</button>
-  <button {{action 'incorrect'}}>Incorrect</button>
-  <p class="note">{{remaining}} words remaining (out of {{totalCount}}).</p>
-  <p class="note"><a href="#" {{action 'restart'}}>Restart this quiz.</a><p/>
-{{/if}}
+  {{#unless isStarted}}
+    <h1>Are you ready?</h1>
+    <button {{action 'start'}}>Begin</button>
+  {{/unless}}
 
-{{#if isComplete}}
-  <h1>Complete!</h1>
+  {{#if inProcess}}
+    <h1 class="no-space">{{word.word}}</h1>
+    <p class="note"><a href="#" {{action 'show'}}>Show Definition</a></p>
+    <p id="definition" style="display:none;">{{word.definition}}</p>
+    <button {{action 'correct'}}>Correct</button>
+    <button {{action 'incorrect'}}>Incorrect</button>
+    <p class="note">{{remaining}} words remaining (out of {{totalCount}}).</p>
+    <p class="note"><a href="#" {{action 'restart'}}>Restart this quiz.</a><p/>
+  {{/if}}
+
+  {{#if isComplete}}
+    <h1>Complete!</h1>
+    <p>{{#link-to 'lists.index'}}Return to word lists.{{/link-to}}<p/>
+    <p><a href="#" {{action 'restart'}}>Run this quiz again.</a><p/>
+  {{/if}}
+
+{{else}}
+  <h2>No Words to Quiz</h2>
+  <p>You must add at least one word to a list before you can begin a quiz.</p>
   <p>{{#link-to 'lists.index'}}Return to word lists.{{/link-to}}<p/>
-  <p><a href="#" {{action 'restart'}}>Run this quiz again.</a><p/>
 {{/if}}
