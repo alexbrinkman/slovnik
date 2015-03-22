@@ -51,3 +51,12 @@ aws s3 sync dist s3://www.vocabbuilderapp.com/ --acl public-read --recursive
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
+## Upgrading Ember CLI
+
+Follow the base instructions then re-install each addon:
+
+* ember install:npm broccoli-sass
+* npm install --save-dev ember-cli-google-analytics
+* npm install --save-dev ember-localstorage-adapter
+
+
